@@ -6,8 +6,10 @@ class MyTelegramBot extends HtmlTelegramBot {
         super(token);
     }
 
-    // Мы будем писать тут наш код
+    async hello(msg) {
+      await this.sendText('Привет')
+    }
 }
 
-const bot = new MyTelegramBot("TELEGRAM_BOT_TOKEN");
-// Мы будем писать тут наш код
+const bot = new MyTelegramBot("7516598346:AAHX2pT5KBrl-peTqRJbxq4o9WTli3QO4Gg");
+bot.onTextMessage(bot.hello)
